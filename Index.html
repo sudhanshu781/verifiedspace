@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premium Project Inquiry Form</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
+      background: #808080;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    .form-container {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 2rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+      max-width: 480px;
+      width: 100%;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .headline {
+      color: #1a1a1a;
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      line-height: 1.3;
+      background: linear-gradient(45deg, #0984e3, #00cec9);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .benefit-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      background: #f8f9fa;
+      border-radius: 0.75rem;
+      font-weight: 500;
+      color: #2d3436;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      margin: 1.5rem 0;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .benefit-item div {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+
+    .benefit-item svg {
+      width: 1.25rem;
+      height: 1.25rem;
+      color: #00b894;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #636e72;
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
+
+    input, .country-code {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border: 2px solid #e0e0e0;
+      border-radius: 0.75rem;
+      font-size: 1rem;
+      background: white;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #0984e3;
+      box-shadow: 0 0 0 3px rgba(9, 132, 227, 0.15);
+    }
+
+    .phone-input {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+
+    .country-code {
+      background: #f8f9fa;
+      width: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #2d3436;
+      font-weight: 500;
+      user-select: none;
+    }
+
+    .submit-btn {
+      background: linear-gradient(45deg, #0984e3, #00cec9);
+      color: white;
+      width: 100%;
+      padding: 1rem;
+      border: none;
+      border-radius: 0.75rem;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      margin-top: 1rem;
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(9, 132, 227, 0.3);
+    }
+
+    @media (max-width: 480px) {
+      .headline {
+        font-size: 1.5rem;
+      }
+      .benefit-item {
+        gap: 0.5rem;
+      }
+      .benefit-item div {
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1 class="headline">Fill this Form to Get Project Details On Your WhatsApp!</h1>
+    
+    <div class="benefit-item">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        Official Channel Partner
+      </div>
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        Prime Location Advantage
+      </div>
+    </div>
+
+    <form onsubmit="window.location.href = 'https://sudhanshumaurya781.systeme.io/thanks'; return false;">
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" placeholder="Enter your full name" required />
+      </div>
+
+      <div class="form-group">
+        <label>Contact Number</label>
+        <div class="phone-input">
+          <div class="country-code">+91</div>
+          <input type="number" id="phone" pattern="\d*" placeholder="10-digit mobile number" minlength="10" maxlength="10" required oninput="validatePhoneNumber(this)" />
+        </div>
+      </div>
+
+      <button type="submit" class="submit-btn">Request Project Details</button>
+    </form>
+  </div>
+
+  <script>
+    function validatePhoneNumber(input) {
+      let phone = input.value;
+      if (phone.length > 10) {
+        input.value = phone.slice(0, 10);
+      }
+    }
+  </script>
+</body>
+</html>
