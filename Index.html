@@ -24,7 +24,8 @@
     .bottom-section {
       background-color: #ffffff;
       color: #000;
-      padding: 30px 20px;
+      padding: 30px 20px 60px;
+      border-radius: 0;
     }
     .container {
       max-width: 600px;
@@ -94,11 +95,20 @@
     .mobile-row input {
       flex: 1;
     }
+    .site-visit-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+    }
+    .site-visit-container label {
+      margin-bottom: 0;
+      white-space: nowrap;
+    }
     .site-visit-options {
       display: flex;
       gap: 10px;
-      margin-top: 10px;
-      margin-bottom: 25px;
     }
     .site-visit-options button {
       padding: 10px 20px;
@@ -109,11 +119,21 @@
       background-color: transparent;
       color: #333;
       font-family: 'Montserrat', sans-serif;
+      transition: all 0.3s;
+    }
+    #yesBtn {
+      border-color: #a5d6a7;
+      background-color: #c8e6c9;
+    }
+    #noBtn {
+      border-color: #ef9a9a;
+      background-color: #ffcdd2;
     }
     .site-visit-options button.selected {
-      background-color: #333;
-      color: #fff;
-      border-color: #333;
+      background-color: #333 !important;
+      color: #fff !important;
+      border-color: #333 !important;
+      transform: scale(1.05);
     }
     .btn-submit {
       background-color: #e53935;
@@ -141,14 +161,15 @@
 
   <div class="top-section">
     <div class="container">
-      <h1><span class="highlight">Spacious</span> 3BK Flat</h1>
+      <h1><span class="highlight">Spacious</span> 3BHK Flat</h1>
       <p>📍 Ambli T Junction, Ahmedabad</p>
 
-      <h2><span class="highlight">Project</span> Highlight</h2>
+      <h2><span class="highlight">Project</span> Highlights</h2>
       <ul>
         <li>Big Balcony</li>
         <li>Separate Exit</li>
         <li>35+ Amenities</li>
+        
       </ul>
 
       <div class="live-view">
@@ -164,25 +185,27 @@
         <p>Fill in your details to unlock pricing, brochure & exclusive deals from the builder.</p>
 
         <form id="leadForm">
-          <label for="fullname">Full Name*</label>
+          
           <input type="text" id="fullname" name="fullname" required placeholder="Your Full Name"/>
 
-          <label for="mobile">Mobile*</label>
+          
           <div class="mobile-row">
             <select id="countryCode" name="countryCode" required>
-              <option value="+91">🇮🇳 +91</option>
-              <option value="+1">🇺🇸 +1</option>
-              <option value="+44">🇬🇧 +44</option>
-              <option value="+61">🇦🇺 +61</option>
-              <option value="+971">🇦🇪 +971</option>
+              <option value="+91">+91</option>
+              <option value="+1">+1</option>
+              <option value="+44">+44</option>
+              <option value="+61">+61</option>
+              <option value="+971">+971</option>
             </select>
             <input type="tel" name="mobile" required placeholder="Mobile Number"/>
           </div>
 
-          <label>Optional<br>Are you interested in Site Visit</label>
-          <div class="site-visit-options">
-            <button type="button" id="noBtn">No</button>
-            <button type="button" id="yesBtn">Yes</button>
+          <div class="site-visit-container">
+            <label>Are you interested in Site Visit</label>
+            <div class="site-visit-options">
+              <button type="button" id="noBtn">No</button>
+              <button type="button" id="yesBtn">Yes</button>
+            </div>
           </div>
 
           <button type="submit" class="btn-submit">Get Details Now!</button>
@@ -197,7 +220,7 @@
 
   <script>
     function updateLiveViewCount() {
-      const count = Math.floor(Math.random() * 6) + 7; // Between 7–12
+      const count = Math.floor(Math.random() * 6) + 7;
       document.getElementById("liveCount").textContent = count;
     }
     setInterval(updateLiveViewCount, 5000);
