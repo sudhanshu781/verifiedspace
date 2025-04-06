@@ -15,7 +15,16 @@
       font-family: 'Montserrat', sans-serif;
       background-color: #1e1e1e;
       color: #fff;
-      padding: 20px;
+      padding: 0;
+    }
+    .top-section {
+      background-color: #1e1e1e;
+      padding: 30px 20px;
+    }
+    .bottom-section {
+      background-color: #ffffff;
+      color: #000;
+      padding: 30px 20px;
     }
     .container {
       max-width: 600px;
@@ -53,13 +62,6 @@
       color: white;
       font-size: 14px;
       margin: 15px 0;
-    }
-    .section {
-      background: #fff;
-      color: #000;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
     }
     .section h2 {
       margin-bottom: 10px;
@@ -137,52 +139,58 @@
 </head>
 <body>
 
-  <div class="container">
-    <h1><span class="highlight">Spacious</span> 3BK Flat</h1>
-    <p>📍 Ambli T Junction, Ahmedabad</p>
+  <div class="top-section">
+    <div class="container">
+      <h1><span class="highlight">Spacious</span> 3BK Flat</h1>
+      <p>📍 Ambli T Junction, Ahmedabad</p>
 
-    <h2><span class="highlight">Project</span> Highlight</h2>
-    <ul>
-      <li>Big Balcony</li>
-      <li>Separate Exit</li>
-      <li>35+ Amenities</li>
-    </ul>
+      <h2><span class="highlight">Project</span> Highlight</h2>
+      <ul>
+        <li>Big Balcony</li>
+        <li>Separate Exit</li>
+        <li>35+ Amenities</li>
+      </ul>
 
-    <div class="live-view">
-      👁️ <span id="liveCount">12</span> LIVE
+      <div class="live-view">
+        👁️ <span id="liveCount">12</span> LIVE
+      </div>
     </div>
+  </div>
 
-    <div class="section">
-      <h2>Get Project Details</h2>
-      <p>Fill in your details to unlock pricing, brochure & exclusive deals from the builder.</p>
+  <div class="bottom-section">
+    <div class="container">
+      <div class="section">
+        <h2>Get Project Details</h2>
+        <p>Fill in your details to unlock pricing, brochure & exclusive deals from the builder.</p>
 
-      <form id="leadForm">
-        <label for="fullname">Full Name*</label>
-        <input type="text" id="fullname" name="fullname" required placeholder="Your Full Name"/>
+        <form id="leadForm">
+          <label for="fullname">Full Name*</label>
+          <input type="text" id="fullname" name="fullname" required placeholder="Your Full Name"/>
 
-        <label for="mobile">Mobile*</label>
-        <div class="mobile-row">
-          <select id="countryCode" name="countryCode" required>
-            <option value="+91">🇮🇳 +91</option>
-            <option value="+1">🇺🇸 +1</option>
-            <option value="+44">🇬🇧 +44</option>
-            <option value="+61">🇦🇺 +61</option>
-            <option value="+971">🇦🇪 +971</option>
-          </select>
-          <input type="tel" name="mobile" required placeholder="Mobile Number"/>
+          <label for="mobile">Mobile*</label>
+          <div class="mobile-row">
+            <select id="countryCode" name="countryCode" required>
+              <option value="+91">🇮🇳 +91</option>
+              <option value="+1">🇺🇸 +1</option>
+              <option value="+44">🇬🇧 +44</option>
+              <option value="+61">🇦🇺 +61</option>
+              <option value="+971">🇦🇪 +971</option>
+            </select>
+            <input type="tel" name="mobile" required placeholder="Mobile Number"/>
+          </div>
+
+          <label>Optional<br>Are you interested in Site Visit</label>
+          <div class="site-visit-options">
+            <button type="button" id="noBtn">No</button>
+            <button type="button" id="yesBtn">Yes</button>
+          </div>
+
+          <button type="submit" class="btn-submit">Get Details Now!</button>
+        </form>
+
+        <div class="info">
+          🔒 Your information is 100% safe with us.
         </div>
-
-        <label>Optional<br>Are you interested in Site Visit</label>
-        <div class="site-visit-options">
-          <button type="button" id="noBtn">No</button>
-          <button type="button" id="yesBtn">Yes</button>
-        </div>
-
-        <button type="submit" class="btn-submit">Get Details Now!</button>
-      </form>
-
-      <div class="info">
-        🔒 Your information is 100% safe with us.
       </div>
     </div>
   </div>
