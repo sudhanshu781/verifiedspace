@@ -1,249 +1,434 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>3BK Flat Lead Form</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background-color: #1e1e1e;
-      color: #fff;
-      padding: 0;
-    }
-    .top-section {
-      background-color: #1e1e1e;
-      padding: 30px 20px;
-    }
-    .bottom-section {
-      background-color: #ffffff;
-      color: #000;
-      padding: 30px 20px 60px;
-      border-radius: 0;
-    }
-    .container {
-      max-width: 600px;
-      margin: auto;
-    }
-    h1 {
-      font-size: 28px;
-      margin-bottom: 10px;
-    }
-    h2 {
-      font-size: 22px;
-      margin-top: 25px;
-      margin-bottom: 10px;
-    }
-    .highlight {
-      color: #2ecc71;
-    }
-    ul {
-      list-style: none;
-      padding-left: 0;
-      margin-bottom: 20px;
-    }
-    ul li::before {
-      content: '✔️';
-      margin-right: 8px;
-      color: #9b59b6;
-    }
-    .live-view {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background-color: #333;
-      padding: 4px 10px;
-      border-radius: 20px;
-      color: white;
-      font-size: 14px;
-      margin: 15px 0;
-    }
-    .section h2 {
-      margin-bottom: 10px;
-    }
-    .section p {
-      font-size: 14px;
-      margin-bottom: 20px;
-    }
-    form label {
-      display: block;
-      margin-bottom: 6px;
-      font-weight: 600;
-    }
-    input, select {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 15px;
-      font-family: 'Montserrat', sans-serif;
-    }
-    .mobile-row {
-      display: flex;
-      gap: 10px;
-    }
-    .mobile-row select {
-      width: 75px;
-    }
-    .mobile-row input {
-      flex: 1;
-    }
-    .site-visit-container {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 25px;
-      flex-wrap: wrap;
-    }
-    .site-visit-container label {
-      margin-bottom: 0;
-      white-space: nowrap;
-    }
-    .site-visit-options {
-      display: flex;
-      gap: 10px;
-    }
-    .site-visit-options button {
-      padding: 10px 20px;
-      border: 2px solid #ccc;
-      border-radius: 20px;
-      cursor: pointer;
-      font-weight: bold;
-      background-color: transparent;
-      color: #333;
-      font-family: 'Montserrat', sans-serif;
-      transition: all 0.3s;
-    }
-    #yesBtn {
-      border-color: #a5d6a7;
-      background-color: #c8e6c9;
-    }
-    #noBtn {
-      border-color: #ef9a9a;
-      background-color: #ffcdd2;
-    }
-    .site-visit-options button.selected {
-      background-color: #333 !important;
-      color: #fff !important;
-      border-color: #333 !important;
-      transform: scale(1.05);
-    }
-    .btn-submit {
-      background-color: #e53935;
-      color: white;
-      padding: 15px;
-      font-size: 18px;
-      width: 100%;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-family: 'Montserrat', sans-serif;
-    }
-    .btn-submit:hover {
-      background-color: #d32f2f;
-    }
-    .info {
-      text-align: center;
-      font-size: 12px;
-      margin-top: 12px;
-      color: #777;
-    }
-  </style>
+<html lang="en" class="no-overflow"><head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="https://cdn.staticmb.com/propertydetailstatic/03112025071146/css/micro-site-prj-detail-web.css" media="all">
+
+
+
+
 </head>
-<body>
-
-  <div class="top-section">
-    <div class="container">
-      <h1><span class="highlight">Spacious</span> 3BHK Flat</h1>
-      <p>📍 Ambli T Junction, Ahmedabad</p>
-
-      <h2><span class="highlight">Project</span> Highlights</h2>
-      <ul>
-        <li>Big Balcony</li>
-        <li>Separate Exit</li>
-        <li>35+ Amenities</li>
+<div class="contactForm contactAgentForm formsWrap activeForm" id="aboveContactAgentForm695645" onclick="stopPage=true;" style="display: block;">
+    
+    <div class="m-contact m-contact--project m-contact--req-photo">
+        <div class="m-contact__close ico" id="closeContact" onclick="closePropertyContactForm('695645',false); "></div>
         
-      </ul>
-
-      <div class="live-view">
-        👁️ <span id="liveCount">12</span> LIVE
-      </div>
-    </div>
-  </div>
-
-  <div class="bottom-section">
-    <div class="container">
-      <div class="section">
-        <h2>Get Project Details</h2>
-        <p>Fill in your details to unlock pricing, brochure & exclusive deals from the builder.</p>
-
-        <form id="leadForm">
-          
-          <input type="text" id="fullname" name="fullname" required placeholder="Your Full Name"/>
-
-          
-          <div class="mobile-row">
-            <select id="countryCode" name="countryCode" required>
-              <option value="+91">+91</option>
-              <option value="+1">+1</option>
-              <option value="+44">+44</option>
-              <option value="+61">+61</option>
-              <option value="+971">+971</option>
-            </select>
-            <input type="tel" name="mobile" required placeholder="Mobile Number"/>
-          </div>
-
-          <div class="site-visit-container">
-            <label>Are you interested in Site Visit</label>
-            <div class="site-visit-options">
-              <button type="button" id="noBtn">No</button>
-              <button type="button" id="yesBtn">Yes</button>
+        <div class="m-contact__body">
+            <div class="req-photo-head">
+                <div id="download-brochure-contact-title-text">
+                    <div class="req-photo-title ellipsis" style="padding-bottom: 8px; margin-right: 80px;">Shaligram Luxuria</div>
+                        <div class="req-photo-text ellipsis" style="margin-right: 80px;">Ambli-Bopal-Road, Ahmedabad</div>
+                    
+                        
+                        
+                            <div class="req-photo-text"><span id="random-brochure">8 People</span> viewing this project!</div>
+                        
+                    
+                    <div class="req-photo-head__icon" style="right: 15px;"><img src="https://cdn.staticmb.com/propertydetailstatic/images/download-brochure-contact-icon.svg" alt=""></div>    
+				</div>
             </div>
-          </div>
 
-          <button type="submit" class="btn-submit">Get Details Now!</button>
-        </form>
+            <div class="for-mobile-section">
+                <div class="m-contact__slide m-contact__slide--1" id="projectFormBlock" data-slide="main-form" data-step="one">
+					<div class="m-contact__covidmsg" id="m-contact__covidmsg" style="padding: 0px 0px 20px;">
+                        <div class="m-contact__covidmsg--heading">Download Brochure</div>
+                        <div class="m-contact__covidmsg--text">
+                            Fill your details &amp; get a great deal from the Builder directly
+                        </div>
+                    </div>
+				    <form class="m-contact__form" id="contactAdvertiser695645" autocomplete="on">
+                        <div id="nriMobileBlockError695645" class="nri-pref-error-msg" style="display:none">Error</div>
+                        <!-- Select User Type (Agent / Individual)  -->
+                        <div class="m-contact__fieldset m-contact__fieldset--inline js-fieldset" style="display:none">
+                            <label for="" class="m-contact__label m-contact__label--inline pull-left">I am</label>
+                            <div class="iaim-btn">
+                                <div class="iaim-btn__item">
+                                    <input type="radio" class="iaim-btn__input" id="individual" name="userType695645" value="I" onclick="nameFieldFocus('695645');storeValueInCookie('695645');" checked="checked">
+                                    <label for="individual" class="iaim-btn__label">Individual</label>
+                                </div>
+                                <div class="iaim-btn__item">
+                                    <input type="radio" class="iaim-btn__input" id="agent" name="userType695645" value="A" onclick="nameFieldFocus('695645');storeValueInCookie('695645');">
+                                    <label for="agent" class="iaim-btn__label">Agent</label>
+                                </div>
+                            </div>
+                            <div class="m-contact__help-text" id="userTypeError695645">Error</div>
+                        </div>
+                        <!-- Name -->
+                        <div class="m-contact__fieldset js-fieldset">
+                            <input type="text" class="m-contact__input" id="username695645" name="username695645" onblur="validateFieldBlur('username695645','userNameError695645','695645','CONTACT');" required="">
+                            <label class="m-contact__label" for="username695645">Name</label>
+                            <div class="m-contact__help-text" id="userNameError695645">Error</div>
+                        </div>
 
-        <div class="info">
-          🔒 Your information is 100% safe with us.
+                        <!-- Email Id -->
+                        <div class="m-contact__fieldset js-fieldset">
+                            <input type="text" class="m-contact__input" id="userEmail695645" name="userEmail695645" onblur="validateFieldBlur('userEmail695645','userEmailError695645','695645','CONTACT');" onfocus="clearSuggestion(695645)" onkeydown="clearSuggestion(695645)" required="" list="email-options695645"><datalist id="email-options695645"></datalist>
+                            <label class="m-contact__label" for="userEmail695645">Email</label>
+                            <div class="m-contact__help-text" id="userEmailError695645">Error</div>
+                        </div>
+
+                        <!-- Mobile No. -->
+                        <div class="m-contact__fieldset m-contact__fieldset--group js-fieldset">
+                            <select onchange="checkNriForm(this);" class="m-contact__select m-contact__prefix m-contact__country-isd" id="selectCountry_mobile_695645" name="selectCountry_mobile_695645">
+                                                           <option value="50" selected="selected">IND +91</option>
+                            <option value="51">USA +1</option>
+<option value="52">GBR +44</option>
+<option value="53">ARE +971</option>
+<option value="54">CAN +1</option>
+<option value="55">AUS +61</option>
+<option value="56">PAK +92</option>
+<option value="57">SAU +966</option>
+<option value="58">KWT +965</option>
+<option value="59">ZAF +27</option>
+<option value="60">AFG +93</option>
+<option value="61">ALB +355</option>
+<option value="62">DZA +213</option>
+<option value="63">ASM +684</option>
+<option value="64">AND +376</option>
+<option value="65">AGO +244</option>
+<option value="66">AIA +264</option>
+<option value="67">ATG +268</option>
+<option value="68">ARG +54</option>
+<option value="69">ARM +374</option>
+<option value="70">AUT +43</option>
+<option value="71">AZE +994</option>
+<option value="72">BHS +1242</option>
+<option value="73">BHR +973</option>
+<option value="74">BGD +880</option>
+<option value="75">BRB +1246</option>
+<option value="76">BLR +375</option>
+<option value="77">BEL +32</option>
+<option value="78">BLZ +501</option>
+<option value="79">BMU +1441</option>
+<option value="80">BTN +975</option>
+<option value="81">BOL +591</option>
+<option value="82">BIH +387</option>
+<option value="83">BWA +267</option>
+<option value="84">BRA +55</option>
+<option value="85">BRN +673</option>
+<option value="86">BGR +359</option>
+<option value="87">BFA +226</option>
+<option value="88">BDI +257</option>
+<option value="89">KHM +855</option>
+<option value="90">CMR +237</option>
+<option value="91">CPV +238</option>
+<option value="92">CYM +345</option>
+<option value="93">CAF +236</option>
+<option value="94">TCD +235</option>
+<option value="95">CHL +56</option>
+<option value="97">COL +57</option>
+<option value="98">COM +269</option>
+<option value="99">COD +243</option>
+<option value="100">COG +242</option>
+<option value="101">COK +682</option>
+<option value="102">CRI +506</option>
+<option value="103">CIV +225</option>
+<option value="104">HRV +385</option>
+<option value="105">CUB +53</option>
+<option value="106">CYP +357</option>
+<option value="107">CZE +420</option>
+<option value="108">DNK +45</option>
+<option value="109">DJI +253</option>
+<option value="110">DMA +767</option>
+<option value="111">DOM +1</option>
+<option value="112">TLS +670</option>
+<option value="113">ECU +593</option>
+<option value="114">EGY +20</option>
+<option value="115">SLV +503</option>
+<option value="116">GNQ +240</option>
+<option value="117">ERI +291</option>
+<option value="118">EST +372</option>
+<option value="119">ETH +251</option>
+<option value="120">FLK +500</option>
+<option value="121">FRO +298</option>
+<option value="122">FJI +679</option>
+<option value="123">FIN +358</option>
+<option value="124">FRA +33</option>
+<option value="125">GUF +594</option>
+<option value="126">PYF +689</option>
+<option value="127">GAB +241</option>
+<option value="128">GMB +220</option>
+<option value="129">GEO +995</option>
+<option value="130">DEU +49</option>
+<option value="131">GHA +233</option>
+<option value="132">GIB +350</option>
+<option value="133">GRC +30</option>
+<option value="134">GRL +299</option>
+<option value="135">GRD +473</option>
+<option value="136">GLP +590</option>
+<option value="137">GUM +671</option>
+<option value="138">GTM +502</option>
+<option value="139">GIN +224</option>
+<option value="140">GNB +245</option>
+<option value="141">GUY +592</option>
+<option value="142">HTI +509</option>
+<option value="143">HND +504</option>
+<option value="144">HKG +852</option>
+<option value="145">HUN +36</option>
+<option value="146">ISL +354</option>
+<option value="147">IDN +62</option>
+<option value="148">IRN +98</option>
+<option value="149">IRQ +964</option>
+<option value="150">IRL +353</option>
+<option value="151">ISR +972</option>
+<option value="152">ITA +39</option>
+<option value="153">JAM +1</option>
+<option value="154">JPN +81</option>
+<option value="155">JOR +962</option>
+<option value="156">KAZ +7</option>
+<option value="157">KEN +254</option>
+<option value="158">KIR +686</option>
+<option value="159">MDA +82</option>
+<option value="160">KGZ +996</option>
+<option value="161">LAO +856</option>
+<option value="162">LVA +371</option>
+<option value="163">LBN +961</option>
+<option value="164">LSO +266</option>
+<option value="165">LBR +231</option>
+<option value="166">LBY +218</option>
+<option value="167">LIE +423</option>
+<option value="168">LTU +370</option>
+<option value="169">LUX +352</option>
+<option value="170">MAC +853</option>
+<option value="171">MKD +389</option>
+<option value="172">MDG +261</option>
+<option value="173">MWI +265</option>
+<option value="174">MYS +60</option>
+<option value="175">MDV +960</option>
+<option value="176">MLI +223</option>
+<option value="177">MLT +356</option>
+<option value="178">MTQ +596</option>
+<option value="179">MRT +222</option>
+<option value="180">MUS +230</option>
+<option value="181">MYT +269</option>
+<option value="182">MEX +52</option>
+<option value="183">FSM +691</option>
+<option value="184">KOR +373</option>
+<option value="185">MCO +377</option>
+<option value="186">MNG +976</option>
+<option value="187">MSR +664</option>
+<option value="188">MAR +212</option>
+<option value="189">MOZ +258</option>
+<option value="190">MMR +95</option>
+<option value="191">NAM +264</option>
+<option value="192">NRU +674</option>
+<option value="193">NPL +977</option>
+<option value="194">ANT +599</option>
+<option value="195">NLD +31</option>
+<option value="196">NCL +687</option>
+<option value="197">NZL +64</option>
+<option value="198">NIC +505</option>
+<option value="199">NER +227</option>
+<option value="200">NGA +234</option>
+<option value="201">NIU +683</option>
+<option value="202">NFK +672</option>
+<option value="203">PRK +850</option>
+<option value="204">NOR +47</option>
+<option value="205">OMN +968</option>
+<option value="206">PAN +507</option>
+<option value="207">PNG +675</option>
+<option value="208">PRY +595</option>
+<option value="209">PER +51</option>
+<option value="210">PHL +63</option>
+<option value="211">PCN +649</option>
+<option value="212">POL +48</option>
+<option value="213">PRT +351</option>
+<option value="214">PRI +939</option>
+<option value="215">QAT +974</option>
+<option value="216">REU +262</option>
+<option value="217">ROU +40</option>
+<option value="218">RUS +7</option>
+<option value="219">RWA +250</option>
+<option value="220">WSM +685</option>
+<option value="221">SMR +378</option>
+<option value="222">STP +239</option>
+<option value="223">SEN +221</option>
+<option value="224">SCG +381</option>
+<option value="225">SYC +248</option>
+<option value="226">SLE +232</option>
+<option value="227">SGP +65</option>
+<option value="228">SVK +421</option>
+<option value="229">SVN +386</option>
+<option value="230">SLB +677</option>
+<option value="231">SOM +252</option>
+<option value="232">ESP +34</option>
+<option value="233">LKA +94</option>
+<option value="234">SHN +290</option>
+<option value="235">KNA +869</option>
+<option value="236">LCA +758</option>
+<option value="237">SPM +508</option>
+<option value="238">VCT +784</option>
+<option value="239">SDN +249</option>
+<option value="240">SUR +597</option>
+<option value="241">SWZ +268</option>
+<option value="242">SWE +46</option>
+<option value="243">CHE +41</option>
+<option value="244">SYR +963</option>
+<option value="245">TWN +886</option>
+<option value="246">TJK +992</option>
+<option value="247">TZA +255</option>
+<option value="248">THA +66</option>
+<option value="249">TGO +228</option>
+<option value="250">TKL +690</option>
+<option value="251">TON +676</option>
+<option value="252">TTO +868</option>
+<option value="253">TUN +216</option>
+<option value="254">TUR +90</option>
+<option value="255">TKM +993</option>
+<option value="256">TCA +649</option>
+<option value="257">TUV +688</option>
+<option value="258">UGA +256</option>
+<option value="259">UKR +380</option>
+<option value="260">URY +598</option>
+<option value="261">UZB +998</option>
+<option value="262">VUT +678</option>
+<option value="263">VEN +58</option>
+<option value="264">VNM +84</option>
+<option value="265">VGB +284</option>
+<option value="266">VIR +340</option>
+<option value="267">WLF +681</option>
+<option value="268">YEM +967</option>
+<option value="269">YUG +381</option>
+<option value="270">RNR +260</option>
+<option value="271">ZWE +263</option>
+                            </select>
+                            <input type="text" class="m-contact__input m-contact__mobile-no" id="userMobile695645" name="userMobile695645" maxlength="10" onblur="validateFieldBlur('userMobile695645','userMobileError695645','695645','CONTACT');" required="">
+                            <label class="m-contact__label m-contact__label-no" for="userMobile695645">Mobile Number</label>
+                            <div class="m-contact__help-text" id="userMobileError695645" name="userMobileError">Error</div>
+                        </div>
+                        
+
+						
+                        <!-- Interested In (Visible only on Web) -->
+                            <div class="m-contact__fieldset js-fieldset" id="interested__in__id" style="display: none;">
+                                <div class="m-contact__multiselect multiselect" onclick="event.stopPropagation();">
+                                    <div class="m-contact__multiselect__input js-multiselect-input" onclick="openIntrestedDrop(this, '.m-contact__multiselect__option');">
+                                        <span id="pIntrestedTypeDefault" class="m-contact__multiselect__placeholder">Interested in
+                                            <span class="m-contact__multiselect__optional">(optional)</span>
+                                        </span>
+                                        <span id="pIntrestedTypeVal" class="m-contact__multiselect__value"></span>
+                                        <span id="pIntrestedTypeCount" class="m-contact__multiselect__count">+1</span>
+                                    </div>
+                                    <div class="m-contact__multiselect__option" style="display: none;">
+                                        <div class="m-contact__multiselect__option__item" onclick="intrestedSelect_checkbox(this);">
+                                            <div class="m-contact__multiselect__checkbox">
+                                                <input type="checkbox" value="2" id="homeLoanCheck2695645" class="m-contact__multiselect__checkbox__input" name="interested_in" data-label="Site Visit">
+                                                <label for="homeLoanCheck2695645" class="m-contact__multiselect__checkbox__label">Site Visit</label>
+                                            </div>
+                                        </div>
+                                        <div class="m-contact__multiselect__option__item" onclick="intrestedSelect_checkbox(this);">
+                                            <div class="m-contact__multiselect__checkbox">
+                                                <input type="checkbox" id="homeLoanCheck3695645" value="3" class="m-contact__multiselect__checkbox__input" name="interested_in" data-label="Immediate Purchase">
+                                                <label for="homeLoanCheck3695645" class="m-contact__multiselect__checkbox__label">Immediate Purchase</label>
+                                            </div>
+                                        </div>
+                                        <div class="m-contact__multiselect__option__item" onclick="intrestedSelect_checkbox(this);">
+                                            <div class="m-contact__multiselect__checkbox">
+                                                <input type="checkbox" id="loanLead695645" class="m-contact__multiselect__checkbox__input" name="interested_in" data-label="Home Loan">
+                                                <label for="loanLead695645" class="m-contact__multiselect__checkbox__label">Home Loan</label>
+                                            </div>
+                                        </div>
+										<div class="m-contact__multiselect__option__item" onclick="intrestedSelect_checkbox(this);">
+			                                <div class="m-contact__multiselect__checkbox">
+			                                    <input type="checkbox" value="4" id="homeLoanCheck4695645" class="m-contact__multiselect__checkbox__input" name="interested_in" data-label="Investment">
+			                                    <label for="homeLoanCheck4695645" class="m-contact__multiselect__checkbox__label">Investment</label>
+			                                </div>
+			                            </div>
+                                    </div>
+                                </div>
+                                <div class="m-contact__help-text">Error</div>
+                            </div>
+
+                        <!-- Get Morw Options (Visible only in case of User type: Individual ) -->
+                        <div class="m-contact__fieldset js-fieldset getmore" id="optInCheck" style="">
+                            <div class="getmore__checkbox">
+                                <input type="checkbox" name="optIn" id="optIn" value="Y" checked="checked" class="getmore__checkbox__input">
+                                <label for="optIn" class="getmore__checkbox__label">Allow other advertisers with similar properties to contact you</label>
+                            </div>
+                        </div>
+
+
+                        
+                        <div class="m-contact__fieldset js-fieldset getmore eu-terms" id="EUCheck" style="display:none;">
+                            <div class="getmore__checkbox">
+                                <input type="checkbox" name="EUcheckbox" id="EUcheckbox" value="Y" class="getmore__checkbox__input">
+                                <label for="EUcheckbox" class="getmore__checkbox__label">I agree to</label>
+                                <a class="m-contact__link" target="_blank" href="//property.magicbricks.com/terms/terms.html">Magicbricks' T&amp;C</a>
+                            </div>
+                        </div>
+                        
+
+                        
+                    <input type="hidden" name="advertisers695645" value="695645" id="advertisers695645" checked="checked">
+                    <input type="hidden" name="campaignCode695645" id="campaignCode695645" value="Project Detail Page-Contact Now">
+                    <input type="hidden" name="fromProject" id="fromProject" value="Y">
+                    <input type="hidden" name="contactid" value="695645" id="contactid">
+					<input type="hidden" name="downloadBrochure" value="downloadBrochure" id="downloadBrochure">
+					<input type="hidden" name="downloadbrochurepdf" value="downloadBrochure" id="downloadbrochurepdf">
+                    
+                    <!-- Disclaimer / TnC -->
+						<div class="m-contact__disclaimer">
+                        	I Agree to MagicBricks' <a class="m-contact__link" target="_blank" href="http://property.magicbricks.com/terms/terms.html">Terms of Use</a>
+                    	</div>
+                    
+                    
+                    <!-- Submit Button -->
+                    <div class="m-contact__fieldset">
+                        <button type="button" id="showProjContactButtonText" onclick="javascript:createCookie('contactTrackCookie', '', -1); contactProjectNowNew('695645','695645','N', 'N', {'contact_success_ga': 'Clicked brochure2 - DownloadNow'});showToUser('showId695645');fireCustomDimension('695645','','','Ambli-Bopal-Road','','','','','','','','Contact');" class="m-contact__btn m-contact__btn--primary m-contact__btn--block">
+                            Download Now
+                        </button>
+                    </div>
+                    
+                </form>
+            </div>
+            <div class="m-contact__slide m-contact__slide--2" id="internContactFormUppderDiv695645" data-slide="user-verification" data-step="two" style="display:none">
+                <div id="internContactForm695645"></div>
+            </div>
+            <div class="m-contact__slide m-contact__slide--3" id="_prjSuccess695645" data-slide="success" data-step="three" style="display:none">
+					<div class="projectNameN">Project Shaligram Luxuria</div>
+                	<div class="projectLocalityN">Ambli-Bopal-Road,Ahmedabad</div>
+                <div class="successInfoIcon"></div>
+                <h2>Thank You </h2>
+                <div class="messageInfo">Brochure has been downloaded successfully!</div>
+                <div class="infoDataBlock">
+                    <div class="agentInfoName"> 
+						<span id="agentUType"></span>
+						-
+                        <span id="agentName"></span>
+                    </div>
+                    <div class="agentInfoName2">
+                        <span id="advMobileId695645"></span>
+                    </div>
+                    <div class="agentInfoNumber agentInfoName">
+
+                        <span id="svmobileDivP695645"></span>
+                    </div>
+                </div>
+            </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 
-  <script>
-    function updateLiveViewCount() {
-      const count = Math.floor(Math.random() * 6) + 7;
-      document.getElementById("liveCount").textContent = count;
-    }
-    setInterval(updateLiveViewCount, 5000);
-    updateLiveViewCount();
-
-    const yesBtn = document.getElementById("yesBtn");
-    const noBtn = document.getElementById("noBtn");
-
-    yesBtn.addEventListener("click", () => {
-      yesBtn.classList.add("selected");
-      noBtn.classList.remove("selected");
-    });
-
-    noBtn.addEventListener("click", () => {
-      noBtn.classList.add("selected");
-      yesBtn.classList.remove("selected");
-    });
-
-    document.getElementById("leadForm").addEventListener("submit", function (e) {
-      e.preventDefault();
-      alert("Form submitted!");
-    });
-  </script>
-
-</body>
-</html>
+</div></html>
